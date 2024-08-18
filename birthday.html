@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Gizka</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #fce4ec; /* Warna pink pastel lembut */
+            font-family: 'Georgia', serif;
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container img {
+            width: 150px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #e91e63; /* Warna merah muda yang elegan */
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .typing {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #ad1457; /* Warna merah tua untuk kesan elegan */
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid;
+            animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+            color: #333;
+            animation: fadeIn 5s ease-in-out;
+        }
+
+        .flowers {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            z-index: -1;
+            animation: fadeIn 6s ease-in-out;
+        }
+
+        .cake {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background: url('https://png.pngtree.com/png-clipart/20220823/original/pngtree-red-rose-png-image_8483108.png') no-repeat center center;
+            background-size: contain;
+            animation: fadeIn 7s ease-in-out;
+        }
+
+        .falling-flowers {
+            position: absolute;
+            top: -100px;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .falling-flowers img {
+            position: absolute;
+            width: 50px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fall {
+            from { transform: translateY(-100px); }
+            to { transform: translateY(100vh); }
+        }
+
+        .password-container {
+            text-align: center;
+        }
+
+        .password-container input {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid #ad1457;
+        }
+
+        .password-container button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #e91e63;
+            color: white;
+            cursor: pointer;
+        }
+
+        .password-container button:hover {
+            background-color: #ad1457;
+        }
+    </style>
+</head>
+<body>
+    <div class="password-container">
+        <h2>Enter Password to View Gizka's Birthday Surprise</h2>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div class="container">
+        <img src="d1cf29cbfa7fd3645bdd55d324af364a.jpg" alt="Flower Decoration">
+        <h1>Happy Birthday Gizka!</h1>
+        <div class="typing">
+            Wishing You a Day Full of Love, Joy, and Laughter...
+        </div>
+        <p>
+            Gizka, today we celebrate the beautiful person you are and the joy you bring to those around you. On this special day, may you be surrounded by love, happiness, and the warmth of cherished memories. May every moment be as sweet as the cake we share, and may the year ahead be filled with new opportunities and endless blessings.
+        </p>
+        <p>
+            May you always find joy and strength in every moment. I am here for you and will support you no matter what. Have a wonderful birthday and may this year bring you everything you hope for and more.
+        </p>        
+        <p>
+            Your grace, kindness, and determination inspire for me. May you continue to shine brightly, and may your heart always be full of love and your dreams within reach. Here's to another year of beautiful moments, laughter, and all the things that make you smile.
+        </p>
+    </div>
+    <div class="flowers"></div>
+    <div class="cake"></div>
+    <div class="falling-flowers">
+        <img src="R.png" style="left: 20%; animation-duration: 7s;">
+        <img src="R.png" style="left: 40%; animation-duration: 9s;">
+        <img src="R.png" style="left: 60%; animation-duration: 8s;">
+        <img src="R.png" style="left: 80%; animation-duration: 6s;">
+    </div>
+    <audio id="birthday-audio" loop>
+        <source src="9OUurVdRGsc.mp4" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "lupapulakawak") { // Ganti dengan password yang diinginkan
+                document.querySelector(".container").style.display = "block";
+                document.querySelector(".password-container").style.display = "none";
+                document.getElementById("birthday-audio").play();
+            } else {
+                alert("Incorrect password! Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
